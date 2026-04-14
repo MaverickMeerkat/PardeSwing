@@ -19,7 +19,7 @@ export default function PardeSwingLandingPage() {
 
       <section className="relative min-h-[110vh] flex items-start justify-center">
         <img
-          src={`${import.meta.env.BASE_URL}hero.jpg`}
+          src="../public/Hero.jpg"
           alt="Swing dancing"
           className="absolute inset-0 w-full h-full object-cover object-[center_80%]"
         />
@@ -129,7 +129,7 @@ export default function PardeSwingLandingPage() {
       
       {/* Circle image */}
       <img
-          src={`${import.meta.env.BASE_URL}me.jpg`}
+        src="../public/Me.jpg" // ../public/
         alt="David"
 className="w-52 h-52 md:w-64 md:h-64 rounded-full object-cover border-4 border-[#e5e6b5] shadow-lg mx-auto"      />
 
