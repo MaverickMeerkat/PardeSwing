@@ -19,7 +19,7 @@ export default function PardeSwingLandingPage() {
 
       <section className="relative min-h-[110vh] flex items-start justify-center">
         <img
-          src="Hero.jpg"
+          src="Hero.webp"
           alt="Swing dancing"
           className="absolute inset-0 w-full h-full object-cover object-[center_80%]"
         />
