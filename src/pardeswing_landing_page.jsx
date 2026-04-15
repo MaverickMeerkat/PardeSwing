@@ -21,11 +21,11 @@ export default function PardeSwingLandingPage() {
         <img
           src="Hero.webp"
           alt="Swing dancing"
-          className="absolute inset-0 w-full h-full object-cover object-[center_80%]"
+          className="absolute inset-0 w-full h-full object-cover object-center md:object-[center_80%]"
         />
         <div className="absolute inset-0 bg-black/15" />
 
-        <div className="relative z-10 max-w-3xl mx-auto px-6 pt-12 text-right translate-x-20">
+        <div className="relative z-10 max-w-3xl mx-auto px-6 pt-12 text-right md:translate-x-20">
             <div className="text-white text-right">
             <h1 className="text-5xl md:text-7xl font-black leading-none mb-6">
               PardeSwing
