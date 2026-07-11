@@ -1,7 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import { MessageCircle, Mail, ChevronDown, Facebook, Instagram, } from "lucide-react";
+import {
+  Facebook,
+  Instagram,
+  Mail,
+  MessageCircle,
+} from "lucide-react";
 
 function CourseItem({ name, description, dark = false }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -319,7 +324,7 @@ export default function PardeSwingLandingPage() {
             דברו איתנו לפרטים על פתיחת הקורס, רמות, שעות והרשמה.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center items-center">
             <a
               href="mailto:davidrefaeli@gmail.com"
               className="rounded-2xl bg-amber-300 text-neutral-900 px-6 py-4 font-semibold min-w-[220px] hover:scale-[1.02] transition flex items-center justify-center gap-2"
@@ -327,6 +332,7 @@ export default function PardeSwingLandingPage() {
               <Mail size={20} />
               davidrefaeli@gmail.com
             </a>
+
             <a
               href="https://wa.me/972559951741"
               target="_blank"
@@ -336,8 +342,9 @@ export default function PardeSwingLandingPage() {
               <MessageCircle size={20} />
               <span dir="ltr">+972-55-995-1741</span>
             </a>
+
             <a
-              href="https://www.facebook.com/pardeswing"
+              href="https://www.facebook.com/YOUR_PAGE_NAME"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"
@@ -348,7 +355,7 @@ export default function PardeSwingLandingPage() {
             </a>
 
             <a
-              href="https://www.instagram.com/pardeswing"
+              href="https://www.instagram.com/YOUR_INSTAGRAM_USERNAME"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
@@ -357,7 +364,6 @@ export default function PardeSwingLandingPage() {
               <Instagram size={20} />
               Instagram
             </a>
-
           </div>
 
         </div>
