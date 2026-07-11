@@ -1,7 +1,129 @@
 import { MessageCircle, Mail } from "lucide-react";
+import { useState } from "react";
+import { MessageCircle, Mail, ChevronDown } from "lucide-react";
+
+function CourseItem({ name, description }) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <div className="border-b border-neutral-900/15 last:border-b-0">
+      <button
+        type="button"
+        onClick={() => setIsOpen((current) => !current)}
+        aria-expanded={isOpen}
+        className="w-full flex items-center justify-between gap-4 py-5 text-right"
+      >
+        <span className="text-lg md:text-xl font-bold">
+          {name}
+        </span>
+
+        <ChevronDown
+          size={22}
+          className={`shrink-0 transition-transform duration-300 ${
+            isOpen ? "rotate-180" : ""
+          }`}
+        />
+      </button>
+
+      <div
+        className={`grid transition-all duration-300 ${
+          isOpen
+            ? "grid-rows-[1fr] opacity-100 pb-5"
+            : "grid-rows-[0fr] opacity-0"
+        }`}
+      >
+        <div className="overflow-hidden">
+          <p className="text-neutral-700 leading-7 pl-8">
+            {description}
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function CourseGroup({ title, subtitle, courses, dark = false }) {
+  return (
+    <div
+      className={`rounded-[2rem] p-7 md:p-9 ${
+        dark
+          ? "bg-[#559686] text-white"
+          : "bg-white border border-neutral-200 shadow-sm"
+      }`}
+    >
+      <h3 className="text-2xl md:text-3xl font-bold mb-2">
+        {title}
+      </h3>
+
+      <p
+        className={`mb-5 leading-7 ${
+          dark ? "text-white/75" : "text-neutral-600"
+        }`}
+      >
+        {subtitle}
+      </p>
+
+      <div className={dark ? "[&>div]:border-white/20" : ""}>
+        {courses.map((course) => (
+          <CourseItem
+            key={course.name}
+            name={course.name}
+            description={course.description}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
 
 export default function PardeSwingLandingPage() {
   const danceStyles = ["Lindy Hop", "Charleston", "Balboa (soon)", "Collegiate Shag (soon)", "Lindy Hop", "Charleston"];
+
+const beginnerCourses = [
+  {
+    name: "לינדי הופ – קצב 6",
+    description:
+      "היכרות עם הצעדים הבסיסיים של לינדי הופ במבנה של שישה ביטים. נלמד להוביל ולעקוב, לשמור על הקצב ולשלב כמה תנועות בסיסיות בריקוד חופשי.",
+  },
+  {
+    name: "לינדי הופ – קצב 8",
+    description:
+      "לימוד המבנה הקלאסי של שמונה ביטים, כולל עבודת רגליים, חיבור בין בני הזוג ומעברים בין תנועות שונות.",
+  },
+  {
+    name: "צ'רלסטון",
+    description:
+      "קורס אנרגטי ומשחקי שבו נלמד את צעדי הצ'רלסטון הבסיסיים, תנועות בזוג ואפשרויות לשילוב הצ'רלסטון בתוך הלינדי הופ.",
+  },
+];
+
+const continuingCourses = [
+  {
+    name: "סווינג אאוט",
+    description:
+      "העמקה באחת התנועות המרכזיות והאיקוניות של הלינדי הופ, עם דגש על זרימה, מומנטום, חיבור ותנועה במרחב.",
+  },
+  {
+    name: "וריאציות",
+    description:
+      "נלמד להוסיף גיוון לעבודת הרגליים ולתנועות המוכרות, ולפתח ביטוי אישי מבלי לפגוע בחיבור ובתקשורת הזוגית.",
+  },
+  {
+    name: "צ'רלסטון טנדם",
+    description:
+      "צ'רלסטון במנח טנדם, שבו שני הרקדנים פונים לאותו הכיוון. נלמד כניסות, יציאות, תנועות בסיסיות ושילובים מוזיקליים.",
+  },
+  {
+    name: "דיפים ופינאלה",
+    description:
+      "נלמד מספר סיומות ודיפים בטוחים ונוחים, ונעבוד על תזמון מוזיקלי, תקשורת ואופן השימוש בהם בסיום משפט או שיר.",
+  },
+  {
+    name: "חיבור, מוזיקליות ואלתור",
+    description:
+      "קורס העוסק בהקשבה לבן או לבת הזוג, בתגובה למוזיקה וביצירת ריקוד משותף, משחקי ואישי שאינו מבוסס רק על רצף תנועות קבוע.",
+  },
+];
 
   return (
     <div dir="rtl" className="min-h-screen bg-neutral-50 text-neutral-900 overflow-x-hidden">
@@ -100,6 +222,42 @@ export default function PardeSwingLandingPage() {
           </div>
         </div>
       </section>
+
+
+<section id="courses" className="bg-[#f2eee5] py-20">
+  <div className="max-w-6xl mx-auto px-6">
+    <div className="text-center mb-12">
+      <p className="text-sm uppercase tracking-[0.3em] text-neutral-500 mb-3">
+        מסלול הלימוד
+      </p>
+
+      <h2 className="text-3xl md:text-5xl font-bold mb-5">
+        הקורסים שלנו
+      </h2>
+
+      <p className="max-w-2xl mx-auto text-lg leading-8 text-neutral-700">
+        מתחילים מהיסודות וממשיכים בהדרגה לתנועות, רעיונות ומיומנויות
+        שמאפשרים לרקוד בחופשיות ובביטחון.
+      </p>
+    </div>
+
+    <div className="grid lg:grid-cols-2 gap-8 items-start">
+      <CourseGroup
+        title="קורסי מתחילים"
+        subtitle="מתאימים למי שעושים את הצעדים הראשונים בעולם הסווינג. אין צורך בניסיון קודם או בבן או בת זוג."
+        courses={beginnerCourses}
+      />
+
+      <CourseGroup
+        title="קורסי ממשיכים"
+        subtitle="קורסים ממוקדים למי שכבר מכירים את יסודות הלינדי הופ ורוצים להרחיב את אוצר התנועות ואת יכולות הריקוד."
+        courses={continuingCourses}
+        dark
+      />
+    </div>
+  </div>
+</section>
+
 
       <section className="bg-[#e5e6b5] py-20">
         <div className="max-w-4xl mx-auto px-6 text-center">
