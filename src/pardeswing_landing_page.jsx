@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { MessageCircle, Mail, ChevronDown } from "lucide-react";
+import { MessageCircle, Mail, ChevronDown, Facebook, Instagram, } from "lucide-react";
 
 function CourseItem({ name, description, dark = false }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -328,14 +328,36 @@ export default function PardeSwingLandingPage() {
               davidrefaeli@gmail.com
             </a>
             <a
-              href="https://wa.me/972585843232"
+              href="https://wa.me/972559951741"
               target="_blank"
               rel="noopener noreferrer"
               className="rounded-2xl border border-white/25 px-6 py-4 font-semibold min-w-[220px] hover:bg-white/10 transition flex items-center justify-center gap-3"
             >
               <MessageCircle size={20} />
-              <span dir="ltr">+972-58-58-4-32-32</span>
+              <span dir="ltr">+972-55-995-1741</span>
             </a>
+            <a
+              href="https://www.facebook.com/pardeswing"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+              className="rounded-2xl border border-white/25 px-6 py-4 font-semibold min-w-[220px] hover:bg-white/10 transition flex items-center justify-center gap-3"
+            >
+              <Facebook size={20} />
+              Facebook
+            </a>
+
+            <a
+              href="https://www.instagram.com/pardeswing"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              className="rounded-2xl border border-white/25 px-6 py-4 font-semibold min-w-[220px] hover:bg-white/10 transition flex items-center justify-center gap-3"
+            >
+              <Instagram size={20} />
+              Instagram
+            </a>
+
           </div>
 
         </div>
