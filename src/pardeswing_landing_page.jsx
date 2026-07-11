@@ -1,3 +1,5 @@
+"use client";
+
 import { MessageCircle, Mail } from "lucide-react";
 import { useState } from "react";
 import { MessageCircle, Mail, ChevronDown } from "lucide-react";
