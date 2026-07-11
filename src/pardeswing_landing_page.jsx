@@ -338,7 +338,7 @@ export default function PardeSwingLandingPage() {
               <span dir="ltr">+972-55-995-1741</span>
             </a>
             <a
-              href="https://www.facebook.com/pardeswing"
+              href="https://www.facebook.com/profile.php?id=61590077125788"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"
