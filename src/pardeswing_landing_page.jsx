@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { MessageCircle, Mail, ChevronDown } from "lucide-react";
 
-function CourseItem({ name, description }) {
+function CourseItem({ name, description, dark = false }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -27,12 +27,15 @@ function CourseItem({ name, description }) {
 
       <div
         className={`grid transition-all duration-300 ${isOpen
-            ? "grid-rows-[1fr] opacity-100 pb-5"
-            : "grid-rows-[0fr] opacity-0"
+          ? "grid-rows-[1fr] opacity-100 pb-5"
+          : "grid-rows-[0fr] opacity-0"
           }`}
       >
         <div className="overflow-hidden">
-          <p className="text-neutral-700 leading-7 pl-8">
+          <p
+            className={`leading-7 pl-8 ${dark ? "text-white/80" : "text-neutral-700"
+              }`}
+          >
             {description}
           </p>
         </div>
@@ -45,8 +48,8 @@ function CourseGroup({ title, subtitle, courses, dark = false }) {
   return (
     <div
       className={`rounded-[2rem] p-7 md:p-9 ${dark
-          ? "bg-[#559686] text-white"
-          : "bg-white border border-neutral-200 shadow-sm"
+        ? "bg-[#559686] text-white"
+        : "bg-white border border-neutral-200 shadow-sm"
         }`}
     >
       <h3 className="text-2xl md:text-3xl font-bold mb-2">
@@ -66,6 +69,7 @@ function CourseGroup({ title, subtitle, courses, dark = false }) {
             key={course.name}
             name={course.name}
             description={course.description}
+            dark={dark}
           />
         ))}
       </div>
