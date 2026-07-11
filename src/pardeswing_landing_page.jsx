@@ -1,6 +1,5 @@
 "use client";
 
-import { MessageCircle, Mail } from "lucide-react";
 import { useState } from "react";
 import { MessageCircle, Mail, ChevronDown } from "lucide-react";
 
@@ -21,18 +20,16 @@ function CourseItem({ name, description }) {
 
         <ChevronDown
           size={22}
-          className={`shrink-0 transition-transform duration-300 ${
-            isOpen ? "rotate-180" : ""
-          }`}
+          className={`shrink-0 transition-transform duration-300 ${isOpen ? "rotate-180" : ""
+            }`}
         />
       </button>
 
       <div
-        className={`grid transition-all duration-300 ${
-          isOpen
+        className={`grid transition-all duration-300 ${isOpen
             ? "grid-rows-[1fr] opacity-100 pb-5"
             : "grid-rows-[0fr] opacity-0"
-        }`}
+          }`}
       >
         <div className="overflow-hidden">
           <p className="text-neutral-700 leading-7 pl-8">
@@ -47,20 +44,18 @@ function CourseItem({ name, description }) {
 function CourseGroup({ title, subtitle, courses, dark = false }) {
   return (
     <div
-      className={`rounded-[2rem] p-7 md:p-9 ${
-        dark
+      className={`rounded-[2rem] p-7 md:p-9 ${dark
           ? "bg-[#559686] text-white"
           : "bg-white border border-neutral-200 shadow-sm"
-      }`}
+        }`}
     >
       <h3 className="text-2xl md:text-3xl font-bold mb-2">
         {title}
       </h3>
 
       <p
-        className={`mb-5 leading-7 ${
-          dark ? "text-white/75" : "text-neutral-600"
-        }`}
+        className={`mb-5 leading-7 ${dark ? "text-white/75" : "text-neutral-600"
+          }`}
       >
         {subtitle}
       </p>
@@ -81,51 +76,51 @@ function CourseGroup({ title, subtitle, courses, dark = false }) {
 export default function PardeSwingLandingPage() {
   const danceStyles = ["Lindy Hop", "Charleston", "Balboa (soon)", "Collegiate Shag (soon)", "Lindy Hop", "Charleston"];
 
-const beginnerCourses = [
-  {
-    name: "לינדי הופ – קצב 6",
-    description:
-      "היכרות עם הצעדים הבסיסיים של לינדי הופ במבנה של שישה ביטים. נלמד להוביל ולעקוב, לשמור על הקצב ולשלב כמה תנועות בסיסיות בריקוד חופשי.",
-  },
-  {
-    name: "לינדי הופ – קצב 8",
-    description:
-      "לימוד המבנה הקלאסי של שמונה ביטים, כולל עבודת רגליים, חיבור בין בני הזוג ומעברים בין תנועות שונות.",
-  },
-  {
-    name: "צ'רלסטון",
-    description:
-      "קורס אנרגטי ומשחקי שבו נלמד את צעדי הצ'רלסטון הבסיסיים, תנועות בזוג ואפשרויות לשילוב הצ'רלסטון בתוך הלינדי הופ.",
-  },
-];
+  const beginnerCourses = [
+    {
+      name: "לינדי הופ – קצב 6",
+      description:
+        "היכרות עם הצעדים הבסיסיים של לינדי הופ במבנה של שישה ביטים. נלמד להוביל ולעקוב, לשמור על הקצב ולשלב כמה תנועות בסיסיות בריקוד חופשי.",
+    },
+    {
+      name: "לינדי הופ – קצב 8",
+      description:
+        "לימוד המבנה הקלאסי של שמונה ביטים, כולל עבודת רגליים, חיבור בין בני הזוג ומעברים בין תנועות שונות.",
+    },
+    {
+      name: "צ'רלסטון",
+      description:
+        "קורס אנרגטי ומשחקי שבו נלמד את צעדי הצ'רלסטון הבסיסיים, תנועות בזוג ואפשרויות לשילוב הצ'רלסטון בתוך הלינדי הופ.",
+    },
+  ];
 
-const continuingCourses = [
-  {
-    name: "סווינג אאוט",
-    description:
-      "העמקה באחת התנועות המרכזיות והאיקוניות של הלינדי הופ, עם דגש על זרימה, מומנטום, חיבור ותנועה במרחב.",
-  },
-  {
-    name: "וריאציות",
-    description:
-      "נלמד להוסיף גיוון לעבודת הרגליים ולתנועות המוכרות, ולפתח ביטוי אישי מבלי לפגוע בחיבור ובתקשורת הזוגית.",
-  },
-  {
-    name: "צ'רלסטון טנדם",
-    description:
-      "צ'רלסטון במנח טנדם, שבו שני הרקדנים פונים לאותו הכיוון. נלמד כניסות, יציאות, תנועות בסיסיות ושילובים מוזיקליים.",
-  },
-  {
-    name: "דיפים ופינאלה",
-    description:
-      "נלמד מספר סיומות ודיפים בטוחים ונוחים, ונעבוד על תזמון מוזיקלי, תקשורת ואופן השימוש בהם בסיום משפט או שיר.",
-  },
-  {
-    name: "חיבור, מוזיקליות ואלתור",
-    description:
-      "קורס העוסק בהקשבה לבן או לבת הזוג, בתגובה למוזיקה וביצירת ריקוד משותף, משחקי ואישי שאינו מבוסס רק על רצף תנועות קבוע.",
-  },
-];
+  const continuingCourses = [
+    {
+      name: "סווינג אאוט",
+      description:
+        "העמקה באחת התנועות המרכזיות והאיקוניות של הלינדי הופ, עם דגש על זרימה, מומנטום, חיבור ותנועה במרחב.",
+    },
+    {
+      name: "וריאציות",
+      description:
+        "נלמד להוסיף גיוון לעבודת הרגליים ולתנועות המוכרות, ולפתח ביטוי אישי מבלי לפגוע בחיבור ובתקשורת הזוגית.",
+    },
+    {
+      name: "צ'רלסטון טנדם",
+      description:
+        "צ'רלסטון במנח טנדם, שבו שני הרקדנים פונים לאותו הכיוון. נלמד כניסות, יציאות, תנועות בסיסיות ושילובים מוזיקליים.",
+    },
+    {
+      name: "דיפים ופינאלה",
+      description:
+        "נלמד מספר סיומות ודיפים בטוחים ונוחים, ונעבוד על תזמון מוזיקלי, תקשורת ואופן השימוש בהם בסיום משפט או שיר.",
+    },
+    {
+      name: "חיבור, מוזיקליות ואלתור",
+      description:
+        "קורס העוסק בהקשבה לבן או לבת הזוג, בתגובה למוזיקה וביצירת ריקוד משותף, משחקי ואישי שאינו מבוסס רק על רצף תנועות קבוע.",
+    },
+  ];
 
   return (
     <div dir="rtl" className="min-h-screen bg-neutral-50 text-neutral-900 overflow-x-hidden">
@@ -150,13 +145,13 @@ const continuingCourses = [
         <div className="absolute inset-0 bg-black/15" />
 
         <div className="relative z-10 max-w-3xl mx-auto px-6 pt-12 text-right md:translate-x-20">
-            <div className="text-white text-right">
+          <div className="text-white text-right">
             <h1 className="text-5xl md:text-7xl font-black leading-none mb-6">
               PardeSwing
             </h1>
             <p className="uppercase tracking-[0.35em] text-lg mb-4 text-white/80">
-              בית ספר לריקודי סווינג <br/>
-               בפרדס חנה-כרכור
+              בית ספר לריקודי סווינג <br />
+              בפרדס חנה-כרכור
             </p>
           </div>
         </div>
@@ -179,10 +174,10 @@ const continuingCourses = [
               מה זה סווינג?
             </p>
             <h2 className="text-3xl md:text-4xl font-bold mb-5">
-             מוסיקת ג'אז וריקודים חברתיים
+              מוסיקת ג'אז וריקודים חברתיים
             </h2>
             <p className="text-lg leading-8 text-neutral-700 mb-5">
-סווינג הוא גם סגנון מוזיקלי בג'אז וגם שם כולל למשפחה של ריקודים חברתיים שהתפתחו לצדו. בדומה למוזיקה, גם הריקודים משחקיים, קופצניים, אנרגטיים, תוססים – ומלאים בשמחה. בקורסי המתחילים ניפגש עם הלינדי הופ והצ'רלסטון – שניים מהסגנונות הפופולריים ביותר במשפחת ריקודי הסווינג. </p>
+              סווינג הוא גם סגנון מוזיקלי בג'אז וגם שם כולל למשפחה של ריקודים חברתיים שהתפתחו לצדו. בדומה למוזיקה, גם הריקודים משחקיים, קופצניים, אנרגטיים, תוססים – ומלאים בשמחה. בקורסי המתחילים ניפגש עם הלינדי הופ והצ'רלסטון – שניים מהסגנונות הפופולריים ביותר במשפחת ריקודי הסווינג. </p>
           </div>
 
           <div className="bg-[#559686] text-white rounded-[2rem] shadow-sm p-8 md:p-10 text-right">
@@ -193,7 +188,7 @@ const continuingCourses = [
               נולד מתוך תרבות אפרו-אמריקאית ועידן הג'אז
             </h2>
             <p className="text-lg leading-8 text-white/85 mb-5">
-ריקודי הסווינג התפתחו בעיקר בשנות ה-20 עד ה-40 של המאה הקודמת, בקהילות אפרו-אמריקאיות בארצות הברית – במיוחד בשכונות כמו הארלם ובאולמות ריקוד כמו הסבוי (Savoy). הסווינג חווה תחייה מחודשת בשנות ה-80, בין היתר בעקבות גילויו מחדש של פרנקי מנינג – אחד מרקדני הסווינג הגדולים והאהובים ביותר.
+              ריקודי הסווינג התפתחו בעיקר בשנות ה-20 עד ה-40 של המאה הקודמת, בקהילות אפרו-אמריקאיות בארצות הברית – במיוחד בשכונות כמו הארלם ובאולמות ריקוד כמו הסבוי (Savoy). הסווינג חווה תחייה מחודשת בשנות ה-80, בין היתר בעקבות גילויו מחדש של פרנקי מנינג – אחד מרקדני הסווינג הגדולים והאהובים ביותר.
             </p>
           </div>
         </div>
@@ -205,7 +200,7 @@ const continuingCourses = [
             <div className="text-2xl mb-3">🎷</div>
             <h3 className="text-xl font-bold mb-2">אנרגיית ג'אז</h3>
             <p className="text-neutral-700 leading-7">
-               קשה להתנגד בפני מוסיקת הסווינג שמרימה את מצב הרוח ומניעה את הגוף.
+              קשה להתנגד בפני מוסיקת הסווינג שמרימה את מצב הרוח ומניעה את הגוף.
             </p>
           </div>
           <div className="bg-white rounded-[2rem] p-6 border border-neutral-200 shadow-sm text-right">
@@ -226,84 +221,84 @@ const continuingCourses = [
       </section>
 
 
-<section id="courses" className="bg-[#f2eee5] py-20">
-  <div className="max-w-6xl mx-auto px-6">
-    <div className="text-center mb-12">
-      <p className="text-sm uppercase tracking-[0.3em] text-neutral-500 mb-3">
-        מסלול הלימוד
-      </p>
+      <section id="courses" className="bg-[#f2eee5] py-20">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <p className="text-sm uppercase tracking-[0.3em] text-neutral-500 mb-3">
+              מסלול הלימוד
+            </p>
 
-      <h2 className="text-3xl md:text-5xl font-bold mb-5">
-        הקורסים שלנו
-      </h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-5">
+              הקורסים שלנו
+            </h2>
 
-      <p className="max-w-2xl mx-auto text-lg leading-8 text-neutral-700">
-        מתחילים מהיסודות וממשיכים בהדרגה לתנועות, רעיונות ומיומנויות
-        שמאפשרים לרקוד בחופשיות ובביטחון.
-      </p>
-    </div>
+            <p className="max-w-2xl mx-auto text-lg leading-8 text-neutral-700">
+              מתחילים מהיסודות וממשיכים בהדרגה לתנועות, רעיונות ומיומנויות
+              שמאפשרים לרקוד בחופשיות ובביטחון.
+            </p>
+          </div>
 
-    <div className="grid lg:grid-cols-2 gap-8 items-start">
-      <CourseGroup
-        title="קורסי מתחילים"
-        subtitle="מתאימים למי שעושים את הצעדים הראשונים בעולם הסווינג. אין צורך בניסיון קודם או בבן או בת זוג."
-        courses={beginnerCourses}
-      />
+          <div className="grid lg:grid-cols-2 gap-8 items-start">
+            <CourseGroup
+              title="קורסי מתחילים"
+              subtitle="מתאימים למי שעושים את הצעדים הראשונים בעולם הסווינג. אין צורך בניסיון קודם או בבן או בת זוג."
+              courses={beginnerCourses}
+            />
 
-      <CourseGroup
-        title="קורסי ממשיכים"
-        subtitle="קורסים ממוקדים למי שכבר מכירים את יסודות הלינדי הופ ורוצים להרחיב את אוצר התנועות ואת יכולות הריקוד."
-        courses={continuingCourses}
-        dark
-      />
-    </div>
-  </div>
-</section>
+            <CourseGroup
+              title="קורסי ממשיכים"
+              subtitle="קורסים ממוקדים למי שכבר מכירים את יסודות הלינדי הופ ורוצים להרחיב את אוצר התנועות ואת יכולות הריקוד."
+              courses={continuingCourses}
+              dark
+            />
+          </div>
+        </div>
+      </section>
 
 
       <section className="bg-[#e5e6b5] py-20">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          
+
           <h2 className="text-3xl md:text-4xl font-bold mb-8 text-[#2f4f49]">
             קצת על עצמי
           </h2>
 
-<div className="max-w-6xl mx-auto px-6">
-  <div className="grid md:grid-cols-2 gap-10 items-center">
-    
-    {/* VIDEO */}
-    <div className="flex justify-center">
-      <div className="w-full max-w-[360px] aspect-[9/16] rounded-2xl overflow-hidden shadow-xl">
-        <iframe
-          className="w-full h-full"
-          src="https://www.youtube.com/embed/OLE5OgCJ3i8"
-          title="Swing dancing"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        />
-      </div>
-    </div>
+          <div className="max-w-6xl mx-auto px-6">
+            <div className="grid md:grid-cols-2 gap-10 items-center">
 
-    {/* TEXT + IMAGE */}
-    <div className="text-right flex flex-col items-end gap-6">
-      
-      {/* Circle image */}
-      <img
-        src="Me.jpg"
-        alt="David"
-className="w-52 h-52 md:w-64 md:h-64 rounded-full object-cover border-4 border-[#e5e6b5] shadow-lg mx-auto"      />
+              {/* VIDEO */}
+              <div className="flex justify-center">
+                <div className="w-full max-w-[360px] aspect-[9/16] rounded-2xl overflow-hidden shadow-xl">
+                  <iframe
+                    className="w-full h-full"
+                    src="https://www.youtube.com/embed/OLE5OgCJ3i8"
+                    title="Swing dancing"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                </div>
+              </div>
 
-      {/* Text */}
-      <div className="max-w-md">
-        <p className="text-[#3f5f58] leading-7">
-אהלן, אני דוד. את הסווינג הכרתי איפהשהו ב-2008, כשנתקלתי לתומי בפלאשמוב (לאן הם נעלמו?) בתל אביב. מיד נרשמתי לשיעור, והחיוכים המאירים של רינה ודייב, המורים הראשונים שלי, נצרבו בנשמתי לעד. מאז החיים לקחו אותי לכל מני כיוונים, וב-2021 חזרתי לרקוד שוב, בעיקר בסביליה שבספרד. אני מאמין שהסווינג נועד בראש ובראשונה להיות משהו כיפי ושמח שמחבר בין אנשים. הדגש בשיעורים שלי הוא על הנאה ועל תחושת התקדמות, לצד לימוד הטכניקה המינימלית הנדרשת, מתוך רצון לאפשר לכל אחת ואחד לפתח את סגנון הריקוד האישי שלהם. בואו והצטרפו לכיף!
-        </p>
-      </div>
+              {/* TEXT + IMAGE */}
+              <div className="text-right flex flex-col items-end gap-6">
 
-    </div>
+                {/* Circle image */}
+                <img
+                  src="Me.jpg"
+                  alt="David"
+                  className="w-52 h-52 md:w-64 md:h-64 rounded-full object-cover border-4 border-[#e5e6b5] shadow-lg mx-auto" />
 
-  </div>
-</div>
+                {/* Text */}
+                <div className="max-w-md">
+                  <p className="text-[#3f5f58] leading-7">
+                    אהלן, אני דוד. את הסווינג הכרתי איפהשהו ב-2008, כשנתקלתי לתומי בפלאשמוב (לאן הם נעלמו?) בתל אביב. מיד נרשמתי לשיעור, והחיוכים המאירים של רינה ודייב, המורים הראשונים שלי, נצרבו בנשמתי לעד. מאז החיים לקחו אותי לכל מני כיוונים, וב-2021 חזרתי לרקוד שוב, בעיקר בסביליה שבספרד. אני מאמין שהסווינג נועד בראש ובראשונה להיות משהו כיפי ושמח שמחבר בין אנשים. הדגש בשיעורים שלי הוא על הנאה ועל תחושת התקדמות, לצד לימוד הטכניקה המינימלית הנדרשת, מתוך רצון לאפשר לכל אחת ואחד לפתח את סגנון הריקוד האישי שלהם. בואו והצטרפו לכיף!
+                  </p>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
 
         </div>
       </section>
