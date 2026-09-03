@@ -151,13 +151,19 @@ export default function PardeSwingLandingPage() {
 
         <div className="relative z-10 max-w-3xl mx-auto px-6 pt-12 text-right md:translate-x-20">
           <div className="text-white text-right">
-            <h1 className="text-5xl md:text-7xl font-black leading-none mb-6">
+            {/* <h1 className="text-5xl md:text-7xl font-black leading-none mb-6">
               PardeSwing
             </h1>
             <p className="uppercase tracking-[0.35em] text-lg mb-4 text-white/80">
               בית ספר לריקודי סווינג <br />
               בפרדס חנה-כרכור
-            </p>
+            </p> */}
+            <h1 className="text-5xl md:text-7xl font-black leading-none mb-6">
+              PardeSwing
+              <span className="block text-2xl md:text-3xl mt-4">
+                בית ספר לריקודי סווינג בפרדס חנה-כרכור
+              </span>
+            </h1>
           </div>
         </div>
       </section>
